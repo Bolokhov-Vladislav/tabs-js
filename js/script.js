@@ -133,10 +133,11 @@ window.addEventListener('DOMContentLoaded', function() {
             font-size: ${this.fontSize};
             text-align: ${this.textAlign};
           `;
-          
+
           console.log(el);
         }
     }
+    
     const square = new Options('10px', '100px', 'red', '14px', 'center');
     square.newDiv();
 
