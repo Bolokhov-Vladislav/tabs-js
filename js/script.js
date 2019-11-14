@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    info.addEventListener('click', function(e){
+    info.addEventListener('click', (e) => {
         let target = e.target;
 
         if (target && target.classList.contains('info-header-tab')){
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //timer
 
     //1) deadline
-    let deadline = '2019-11-12';
+    let deadline = '2019-11-15';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()); //кол милисек.
@@ -98,7 +98,7 @@ window.addEventListener('DOMContentLoaded', function() {
         about = document.querySelector('#about');
         
    
-    about.addEventListener('click', function(e) {
+    about.addEventListener('click', (e) => {
         if (e.target && e.target.className == 'more' || e.target.className == 'description-btn'){
             overlay.style.display = 'block';
             this.classList.add('more-splash');
@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    close.addEventListener('click', function() {
+    close.addEventListener('click', () => {
         overlay.style.display = 'none';
         more.classList.remove('more-splash');
         document.body.style.overflow = '';
