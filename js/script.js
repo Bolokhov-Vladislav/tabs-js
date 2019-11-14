@@ -137,7 +137,6 @@ window.addEventListener('DOMContentLoaded', function() {
           console.log(el);
         }
     }
-    
     const square = new Options('10px', '100px', 'red', '14px', 'center');
     square.newDiv();
 
