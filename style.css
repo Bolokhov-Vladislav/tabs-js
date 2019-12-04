@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+.content .info .hide {
+  display: none;
+}
+.info-header {
+  display: flex;
+  justify-content: space-around;
+}
+.info-tabcontent {
+  border: 1px solid;
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  padding-bottom: 10px;
+}
+.info-header-tab {
+  font-size: 40px;
+}
+.description-title {
+  text-align: center !important;
+  font-size: 50px;
+  font-family: cursive;
+}
+.description-text {
+  text-align: center;
+  font-family: cursive;
+}
+
+
+
