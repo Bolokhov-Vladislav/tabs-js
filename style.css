@@ -1,23 +1,20 @@
-.content {
-  width: 900px;
-  margin: 0 auto;
-}
-.content .hide {
+.hide {
   display: none;
 }
-.info-header {
+.wrapp {
   display: flex;
   justify-content: space-around;
 }
-.info-header-tab {
+.tab {
   font-size: 40px;
   cursor: pointer;
 }
 .description-title {
   text-align: center;
   font-size: 50px;
-  font-family: cursive;
 }
-
+.active{
+  color: red;
+}
 
 

@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     'use strict';
 
-    let tab = document.querySelectorAll('.info-header-tab'),
-        info = document.querySelector('.info-header'),
-        tabContent = document.querySelectorAll('.info-tabcontent');
+    let tab = document.querySelectorAll('.tab'),
+        wrappTabs = document.querySelector('.wrapp'),
+        tabContent = document.querySelectorAll('.tabcontent');
     
     function hideTabContent(a) {
         for (let i = a; i < tabContent.length; i++){
-            tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
+            tab[i].classList.remove('active');
         }
     }
     hideTabContent(1);
@@ -16,16 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function showTabContent(b) {
         if (tabContent[b].classList.contains('hide')){
             tabContent[b].classList.remove('hide');
-            tabContent[b].classList.add('show');
+            tab[b].classList.add('active');
         }
     }
 
-    info.addEventListener('click', (e) => {
-        let target = e.target;
-
-        if (target && target.classList.contains('info-header-tab')){
+    wrappTabs.addEventListener('click', (e) => {
+        if (e.target.classList.contains('tab')){
             for (let i = 0; i < tab.length; i++) {
-                if(target == tab[i]) {
+                if(e.target == tab[i]) {
+                    tab[i].classList.add('active');
                     hideTabContent(0);
                     showTabContent(i);
                     break;
